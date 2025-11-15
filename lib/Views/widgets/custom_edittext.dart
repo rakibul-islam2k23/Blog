@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 
 class CustomEditText extends StatelessWidget {
-  const CustomEditText({super.key, required this.hintText, required this.type});
+  const CustomEditText({
+    super.key,
+    required this.hintText,
+    required this.type,
+    required this.controller,
+    this.validator,
+  });
   final String hintText;
   final TextInputType type;
+  final TextEditingController controller;
+  final String? Function(String?)? validator;
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +21,8 @@ class CustomEditText extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TextFormField(
+            controller: controller,
+            validator: validator,
             style: TextStyle(
               color: Colors.white,
               fontFamily: "inter",
@@ -31,7 +41,17 @@ class CustomEditText extends StatelessWidget {
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(10)),
               ),
+              disabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(10)),
+              ),
+              errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(10)),
+              ),
+
               focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(10)),
+              ),
+              focusedErrorBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(10)),
               ),
               fillColor: Color(0xFF292E38),

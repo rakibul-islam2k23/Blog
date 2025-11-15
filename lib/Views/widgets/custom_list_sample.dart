@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 
 class CustomListSample extends StatelessWidget {
-  const CustomListSample({super.key});
+  const CustomListSample({
+    super.key,
+    required this.title,
+    required this.subTitle,
+    required this.image,
+  });
+  final String title;
+  final String subTitle;
+  final String image;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +42,7 @@ class CustomListSample extends StatelessWidget {
                   const SizedBox(height: 6),
 
                   Text(
-                    "The future of AI in software Development",
+                    title,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
@@ -47,7 +55,7 @@ class CustomListSample extends StatelessWidget {
                   const SizedBox(height: 6),
 
                   Text(
-                    "The future of AI in software Development. The future of AI in software Development.",
+                    subTitle,
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
@@ -64,8 +72,8 @@ class CustomListSample extends StatelessWidget {
             flex: 1,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
-              child: Image.asset(
-                "assets/images/onboarding_background.png",
+              child: Image.network(
+                image,
                 fit: BoxFit.cover,
                 height: height * .15,
               ),

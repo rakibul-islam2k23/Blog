@@ -1,7 +1,5 @@
 import 'package:final_project/Views/onboarding/widgets/elevated_button.dart';
 import 'package:final_project/Views/widgets/custom_appbar.dart';
-import 'package:final_project/Views/widgets/custom_edittext.dart';
-import 'package:final_project/Views/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 
 class UpdatePassword extends StatelessWidget {
@@ -33,23 +31,23 @@ class UpdatePassword extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      CustomText(text: "Current Password"),
-                      CustomEditText(
-                        hintText: "Enter your current password",
-                        type: TextInputType.visiblePassword,
-                      ),
+                      // CustomText(text: "Current Password"),
+                      // CustomEditText(
+                      //   hintText: "Enter your current password",
+                      //   type: TextInputType.visiblePassword,
+                      // ),
 
-                      CustomText(text: "New Password"),
-                      CustomEditText(
-                        hintText: "Enter your new password",
-                        type: TextInputType.visiblePassword,
-                      ),
+                      // CustomText(text: "New Password"),
+                      // CustomEditText(
+                      //   hintText: "Enter your new password",
+                      //   type: TextInputType.visiblePassword,
+                      // ),
 
-                      CustomText(text: "Confirm new Password"),
-                      CustomEditText(
-                        hintText: "Confirm your new password",
-                        type: TextInputType.visiblePassword,
-                      ),
+                      // CustomText(text: "Confirm new Password"),
+                      // CustomEditText(
+                      //   hintText: "Confirm your new password",
+                      //   type: TextInputType.visiblePassword,
+                      // ),
                     ],
                   ),
                 ),
